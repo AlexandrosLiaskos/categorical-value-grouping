@@ -1,5 +1,11 @@
 # Categorical Value Grouping for Thematic Symbology
 
+[![Checks](https://github.com/AlexandrosLiaskos/categorical-value-grouping/actions/workflows/ci.yml/badge.svg)](https://github.com/AlexandrosLiaskos/categorical-value-grouping/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/categorical-value-grouping.svg)](https://pypi.org/project/categorical-value-grouping/)
+[![npm](https://img.shields.io/npm/v/categorical-value-grouping.svg)](https://www.npmjs.com/package/categorical-value-grouping)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24554514.svg)](https://doi.org/10.5281/zenodo.24554514)
+[![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue.svg)](LICENSE)
+
 A thematic map coloured by a categorical field (unique values symbology) gives each value its own colour. With many
 values, a map is clearer when values are put into named groups: "Mediterranean & Black Sea", "Indo-Pacific",
 "Atlantic & other waters". Each group has one colour and one row in the legend.
@@ -94,8 +100,11 @@ browser. One set of tests for both packages ends that difference.
 
 ## Citation
 
-The citation of the software is given in [CITATION.cff](CITATION.cff). Each release is archived on Zenodo with its own
-DOI.
+Liaskos, A. (2026). _Categorical Value Grouping for Thematic Symbology_ (Version 0.1.0) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.24554514
+
+The citation is also given in [CITATION.cff](CITATION.cff), which GitHub offers under "Cite this repository". Each
+release is archived on Zenodo with its own DOI.
 
 ## Licence
 
