@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Categorical Value Grouping for Thematic Symbology"
+abstract: >-
+  Python and TypeScript packages with the same rules for named groups of the values of a categorical field in unique
+  values symbology: comparing values, checking groups with messages for the person, carrying them over to new data,
+  assigning named colours, making the classes and legend, and writing a MapLibre GL style expression. Both packages
+  pass one shared set of test cases.
+authors:
+  - family-names: Liaskos
+    given-names: Alexandros
+    affiliation: "National and Kapodistrian University of Athens"
+    orcid: "https://orcid.org/0009-0003-0568-945X"
+license: AGPL-3.0-only
+repository-code: "https://github.com/AlexandrosLiaskos/categorical-value-grouping"
+version: 0.1.0
+keywords:
+  - cartography
+  - thematic mapping
+  - symbology
+  - legend
+  - web mapping

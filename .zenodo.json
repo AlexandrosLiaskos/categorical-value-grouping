@@ -1,0 +1,14 @@
+{
+  "title": "Categorical Value Grouping for Thematic Symbology",
+  "upload_type": "software",
+  "description": "<p>Python and TypeScript packages with the same rules for named groups of the values of a categorical field in unique values symbology: comparing values, checking groups with messages for the person, carrying them over to new data, assigning named colours, making the classes and legend, and writing a MapLibre GL style expression. Both packages pass one shared set of test cases.</p>",
+  "creators": [
+    {
+      "name": "Liaskos, Alexandros",
+      "affiliation": "National and Kapodistrian University of Athens",
+      "orcid": "0009-0003-0568-945X"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "keywords": ["cartography", "thematic mapping", "symbology", "legend", "web mapping"]
+}

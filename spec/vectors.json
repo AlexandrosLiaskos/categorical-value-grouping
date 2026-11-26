@@ -1,0 +1,1941 @@
+{
+ "colour_names": [
+  "teal",
+  "orange",
+  "red",
+  "blue",
+  "violet",
+  "amber",
+  "pink",
+  "lime"
+ ],
+ "keys": [
+  {
+   "kind": "number",
+   "value": "2.50",
+   "key": 2.5
+  },
+  {
+   "kind": "number",
+   "value": "1",
+   "key": 1
+  },
+  {
+   "kind": "number",
+   "value": " 3 ",
+   "key": 3
+  },
+  {
+   "kind": "number",
+   "value": "1e3",
+   "key": 1000
+  },
+  {
+   "kind": "number",
+   "value": ".5",
+   "key": 0.5
+  },
+  {
+   "kind": "number",
+   "value": "-0.25",
+   "key": -0.25
+  },
+  {
+   "kind": "number",
+   "value": "abc",
+   "key": "abc"
+  },
+  {
+   "kind": "number",
+   "value": "1_000",
+   "key": "1_000"
+  },
+  {
+   "kind": "number",
+   "value": "Infinity",
+   "key": "Infinity"
+  },
+  {
+   "kind": "yes/no",
+   "value": "True",
+   "key": "true"
+  },
+  {
+   "kind": "yes/no",
+   "value": "NO",
+   "key": "no"
+  },
+  {
+   "kind": "text",
+   "value": "Aegean Sea",
+   "key": "Aegean Sea"
+  },
+  {
+   "kind": "text",
+   "value": "1.0",
+   "key": "1.0"
+  },
+  {
+   "kind": "date",
+   "value": "2021-04-05",
+   "key": "2021-04-05"
+  }
+ ],
+ "number_texts": [
+  {
+   "number": 1,
+   "text": "1"
+  },
+  {
+   "number": 2.5,
+   "text": "2.5"
+  },
+  {
+   "number": -0.25,
+   "text": "-0.25"
+  },
+  {
+   "number": 1000,
+   "text": "1000"
+  },
+  {
+   "number": 1e-05,
+   "text": "0.00001"
+  },
+  {
+   "number": 1e-07,
+   "text": "1e-7"
+  },
+  {
+   "number": 1e+21,
+   "text": "1e+21"
+  },
+  {
+   "number": 123456789012345680000,
+   "text": "123456789012345680000"
+  },
+  {
+   "number": 0.1,
+   "text": "0.1"
+  }
+ ],
+ "colours": [
+  {
+   "about": "own colours kept once; a group without one, with an unknown one or with one taken earlier gets the first free",
+   "groups": [
+    {
+     "colour": "red"
+    },
+    {},
+    {
+     "colour": "red"
+    },
+    {
+     "colour": "black"
+    },
+    {
+     "colour": null
+    }
+   ],
+   "expected": [
+    "red",
+    "teal",
+    "orange",
+    "blue",
+    "violet"
+   ]
+  },
+  {
+   "about": "more groups than colours: the extra ones take the first colour",
+   "groups": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+   ],
+   "expected": [
+    "teal",
+    "orange",
+    "red",
+    "blue",
+    "violet",
+    "amber",
+    "pink",
+    "lime",
+    "teal"
+   ]
+  }
+ ],
+ "validate_ok": [
+  {
+   "about": "labels and heading tidied; a group without a colour gets the first free one",
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "  Mediterranean &  Black Sea ",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ],
+      "colour": "red"
+     },
+     {
+      "label": "Indo-Pacific & marginal seas",
+      "values": [
+       "Indian Ocean",
+       "Red Sea",
+       "Persian Gulf",
+       "Pacific Ocean"
+      ]
+     }
+    ],
+    "legend_heading": " Ocean basin "
+   },
+   "expected": {
+    "legend_heading": "Ocean basin",
+    "groups": [
+     {
+      "label": "Mediterranean & Black Sea",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ],
+      "colour": "red"
+     },
+     {
+      "label": "Indo-Pacific & marginal seas",
+      "values": [
+       "Indian Ocean",
+       "Red Sea",
+       "Persian Gulf",
+       "Pacific Ocean"
+      ],
+      "colour": "teal"
+     }
+    ]
+   }
+  },
+  {
+   "about": "nothing to check",
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {},
+   "expected": {}
+  },
+  {
+   "about": "single symbol with empty settings",
+   "field": null,
+   "config": {
+    "groups": [],
+    "legend_heading": ""
+   },
+   "expected": {}
+  },
+  {
+   "about": "a heading alone",
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "legend_heading": "Ocean basin"
+   },
+   "expected": {
+    "legend_heading": "Ocean basin"
+   }
+  },
+  {
+   "about": "numbers compared by value, values kept as written",
+   "field": {
+    "name": "depth",
+    "kind": "number",
+    "filter": "list",
+    "values": [
+     [
+      "1",
+      3
+     ],
+     [
+      "2.5",
+      2
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Shallow",
+      "values": [
+       "1.0",
+       "2.50"
+      ]
+     }
+    ]
+   },
+   "expected": {
+    "groups": [
+     {
+      "label": "Shallow",
+      "values": [
+       "1.0",
+       "2.50"
+      ],
+      "colour": "teal"
+     }
+    ]
+   }
+  },
+  {
+   "about": "yes/no compared without case",
+   "field": {
+    "name": "active",
+    "kind": "yes/no",
+    "filter": "list",
+    "values": [
+     [
+      "true",
+      5
+     ],
+     [
+      "false",
+      2
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Active",
+      "values": [
+       "True"
+      ],
+      "colour": "blue"
+     }
+    ]
+   },
+   "expected": {
+    "groups": [
+     {
+      "label": "Active",
+      "values": [
+       "True"
+      ],
+      "colour": "blue"
+     }
+    ]
+   }
+  }
+ ],
+ "validate_errors": [
+  {
+   "field": null,
+   "config": {
+    "groups": [
+     {
+      "label": "Mediterranean",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ]
+     }
+    ]
+   },
+   "code": "needs_unique_values",
+   "message": "Groups of values and a legend heading require unique values symbology."
+  },
+  {
+   "field": null,
+   "config": {
+    "legend_heading": "Ocean basin"
+   },
+   "code": "needs_unique_values",
+   "message": "Groups of values and a legend heading require unique values symbology."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": "Mediterranean"
+   },
+   "code": "format",
+   "message": "The groups of values are not in the expected format."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Mediterranean",
+      "values": [
+       1
+      ]
+     }
+    ]
+   },
+   "code": "format",
+   "message": "The groups of values are not in the expected format."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "  ",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ]
+     }
+    ]
+   },
+   "code": "missing_label",
+   "message": "Enter the label of each group."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ]
+     }
+    ]
+   },
+   "code": "label_too_long",
+   "message": "A group label exceeds 120 characters."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Seas",
+      "values": [
+       "Aegean Sea"
+      ]
+     },
+     {
+      "label": "seas",
+      "values": [
+       "Lake"
+      ]
+     }
+    ]
+   },
+   "code": "duplicate_label",
+   "message": "The label “seas” is used by more than one group."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Seas",
+      "values": [
+       "North Sea"
+      ]
+     }
+    ]
+   },
+   "code": "unknown_value",
+   "message": "The value “North Sea” does not occur in the field of the symbology."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake"
+      ]
+     },
+     {
+      "label": "B",
+      "values": [
+       "Red Sea",
+       "Lake"
+      ]
+     }
+    ]
+   },
+   "code": "value_in_two_groups",
+   "message": "The value “Lake” is in more than one group."
+  },
+  {
+   "field": {
+    "name": "depth",
+    "kind": "number",
+    "filter": "list",
+    "values": [
+     [
+      "1",
+      3
+     ],
+     [
+      "2.5",
+      2
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "1"
+      ]
+     },
+     {
+      "label": "B",
+      "values": [
+       "1.0"
+      ]
+     }
+    ]
+   },
+   "code": "value_in_two_groups",
+   "message": "The value “1.0” is in more than one group."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": []
+     }
+    ]
+   },
+   "code": "empty_group",
+   "message": "The group “A” contains no values."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake"
+      ],
+      "colour": "black"
+     }
+    ]
+   },
+   "code": "unknown_colour",
+   "message": "The colour of the group “A” is not a colour of the symbology."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake"
+      ],
+      "colour": "red"
+     },
+     {
+      "label": "B",
+      "values": [
+       "Red Sea"
+      ],
+      "colour": "red"
+     }
+    ]
+   },
+   "code": "duplicate_colour",
+   "message": "Each group must have a colour of its own."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "Group 0",
+      "values": [
+       "Indian Ocean"
+      ]
+     },
+     {
+      "label": "Group 1",
+      "values": [
+       "Pacific Ocean"
+      ]
+     },
+     {
+      "label": "Group 2",
+      "values": [
+       "Aegean Sea"
+      ]
+     },
+     {
+      "label": "Group 3",
+      "values": [
+       "Caribbean Sea"
+      ]
+     },
+     {
+      "label": "Group 4",
+      "values": [
+       "Atlantic Ocean"
+      ]
+     },
+     {
+      "label": "Group 5",
+      "values": [
+       "Mediterranean Sea"
+      ]
+     },
+     {
+      "label": "Group 6",
+      "values": [
+       "Red Sea"
+      ]
+     },
+     {
+      "label": "Group 7",
+      "values": [
+       "Persian Gulf"
+      ]
+     },
+     {
+      "label": "Group 8",
+      "values": [
+       "Ionian Sea"
+      ]
+     }
+    ]
+   },
+   "code": "too_many_groups",
+   "message": "The groups of values are limited to 8, one for each colour of the symbology."
+  },
+  {
+   "field": {
+    "name": "site",
+    "kind": "text",
+    "filter": null
+   },
+   "config": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Sifnos"
+      ]
+     }
+    ]
+   },
+   "code": "needs_value_list",
+   "message": "Groups of values are available for fields with a list of values."
+  },
+  {
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "config": {
+    "legend_heading": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+   },
+   "code": "heading_too_long",
+   "message": "The legend heading exceeds 120 characters."
+  }
+ ],
+ "carry_over": [
+  {
+   "about": "each group keeps the values the field still has; a group left empty is dropped; the heading is kept",
+   "previous": {
+    "groups": [
+     {
+      "label": "Mediterranean & Black Sea",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea",
+       "Black Sea"
+      ],
+      "colour": "red"
+     },
+     {
+      "label": "Atlantic & other waters",
+      "values": [
+       "Atlantic Ocean",
+       "Lake"
+      ],
+      "colour": "teal"
+     }
+    ],
+    "legend_heading": "Ocean basin"
+   },
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ]
+    ]
+   },
+   "expected": {
+    "legend_heading": "Ocean basin",
+    "groups": [
+     {
+      "label": "Mediterranean & Black Sea",
+      "values": [
+       "Mediterranean Sea",
+       "Aegean Sea",
+       "Ionian Sea"
+      ],
+      "colour": "red"
+     }
+    ]
+   }
+  },
+  {
+   "about": "a field without a list of values keeps only the heading",
+   "previous": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake"
+      ],
+      "colour": "red"
+     }
+    ],
+    "legend_heading": "Basin"
+   },
+   "field": {
+    "name": "site",
+    "kind": "text",
+    "filter": null
+   },
+   "expected": {
+    "legend_heading": "Basin"
+   }
+  },
+  {
+   "about": "a value in two groups stays with the first",
+   "previous": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake",
+       "Red Sea"
+      ],
+      "colour": "red"
+     },
+     {
+      "label": "B",
+      "values": [
+       "Lake"
+      ],
+      "colour": "blue"
+     }
+    ]
+   },
+   "field": {
+    "name": "ocean_sea",
+    "kind": "text",
+    "filter": "list",
+    "values": [
+     [
+      "Indian Ocean",
+      94
+     ],
+     [
+      "Pacific Ocean",
+      73
+     ],
+     [
+      "Aegean Sea",
+      65
+     ],
+     [
+      "Caribbean Sea",
+      48
+     ],
+     [
+      "Atlantic Ocean",
+      39
+     ],
+     [
+      "Mediterranean Sea",
+      38
+     ],
+     [
+      "Red Sea",
+      8
+     ],
+     [
+      "Persian Gulf",
+      8
+     ],
+     [
+      "Ionian Sea",
+      8
+     ],
+     [
+      "Lake",
+      2
+     ],
+     [
+      "Black Sea",
+      1
+     ]
+    ]
+   },
+   "expected": {
+    "groups": [
+     {
+      "label": "A",
+      "values": [
+       "Lake",
+       "Red Sea"
+      ],
+      "colour": "red"
+     }
+    ]
+   }
+  }
+ ],
+ "classes": [
+  {
+   "about": "without groups the most frequent values each have a colour, in palette order",
+   "field": "ocean_sea",
+   "kind": "text",
+   "categories": [
+    "Indian Ocean",
+    "Pacific Ocean",
+    "Aegean Sea",
+    "Caribbean Sea",
+    "Atlantic Ocean",
+    "Mediterranean Sea",
+    "Red Sea",
+    "Persian Gulf",
+    "Ionian Sea",
+    "Lake",
+    "Black Sea"
+   ],
+   "groups": [],
+   "grouped": false,
+   "labels": [
+    "Indian Ocean",
+    "Pacific Ocean",
+    "Aegean Sea",
+    "Caribbean Sea",
+    "Atlantic Ocean",
+    "Mediterranean Sea",
+    "Red Sea",
+    "Persian Gulf"
+   ],
+   "members": [
+    [
+     "Indian Ocean"
+    ],
+    [
+     "Pacific Ocean"
+    ],
+    [
+     "Aegean Sea"
+    ],
+    [
+     "Caribbean Sea"
+    ],
+    [
+     "Atlantic Ocean"
+    ],
+    [
+     "Mediterranean Sea"
+    ],
+    [
+     "Red Sea"
+    ],
+    [
+     "Persian Gulf"
+    ]
+   ],
+   "colours": [
+    "teal",
+    "orange",
+    "red",
+    "blue",
+    "violet",
+    "amber",
+    "pink",
+    "lime"
+   ],
+   "class_of": {
+    "Indian Ocean": 0,
+    "Persian Gulf": 7,
+    "Ionian Sea": -1,
+    "Black Sea": -1
+   }
+  },
+  {
+   "about": "with groups each group is a class in the colour of its name; an empty group is left out; a value named twice stays with the first group",
+   "field": "ocean_sea",
+   "kind": "text",
+   "categories": [
+    "Indian Ocean",
+    "Pacific Ocean",
+    "Aegean Sea",
+    "Caribbean Sea",
+    "Atlantic Ocean",
+    "Mediterranean Sea",
+    "Red Sea",
+    "Persian Gulf",
+    "Ionian Sea",
+    "Lake",
+    "Black Sea"
+   ],
+   "groups": [
+    {
+     "label": "Mediterranean",
+     "values": [
+      "Mediterranean Sea",
+      "Aegean Sea",
+      "Ionian Sea",
+      "Black Sea"
+     ],
+     "colour": "red"
+    },
+    {
+     "label": "Empty",
+     "values": []
+    },
+    {
+     "label": "Indo-Pacific",
+     "values": [
+      "Indian Ocean",
+      "Red Sea",
+      "Persian Gulf",
+      "Pacific Ocean",
+      "Black Sea"
+     ]
+    }
+   ],
+   "grouped": true,
+   "labels": [
+    "Mediterranean",
+    "Indo-Pacific"
+   ],
+   "members": [
+    [
+     "Mediterranean Sea",
+     "Aegean Sea",
+     "Ionian Sea",
+     "Black Sea"
+    ],
+    [
+     "Indian Ocean",
+     "Red Sea",
+     "Persian Gulf",
+     "Pacific Ocean"
+    ]
+   ],
+   "colours": [
+    "red",
+    "teal"
+   ],
+   "class_of": {
+    "Aegean Sea": 0,
+    "Black Sea": 0,
+    "Red Sea": 1,
+    "Lake": -1
+   }
+  },
+  {
+   "about": "a number field compares a record's value with the group's values by number",
+   "field": "depth",
+   "kind": "number",
+   "categories": [
+    "1",
+    "2.5"
+   ],
+   "groups": [
+    {
+     "label": "Shallow",
+     "values": [
+      "1.0"
+     ],
+     "colour": "blue"
+    }
+   ],
+   "grouped": true,
+   "labels": [
+    "Shallow"
+   ],
+   "members": [
+    [
+     "1.0"
+    ]
+   ],
+   "colours": [
+    "blue"
+   ],
+   "class_of": {
+    "1": 0,
+    "1.00": 0,
+    "2.5": -1
+   }
+  },
+  {
+   "about": "no field: single symbol",
+   "field": null,
+   "kind": "text",
+   "categories": [
+    "a"
+   ],
+   "groups": [],
+   "grouped": false,
+   "labels": [],
+   "members": [],
+   "colours": [],
+   "class_of": {
+    "a": -1
+   }
+  }
+ ],
+ "legend": [
+  {
+   "about": "with groups: every group in its order with the records of its values",
+   "classes": 1,
+   "counted": [
+    [
+     "Indian Ocean",
+     94
+    ],
+    [
+     "Pacific Ocean",
+     73
+    ],
+    [
+     "Aegean Sea",
+     65
+    ],
+    [
+     "Caribbean Sea",
+     48
+    ],
+    [
+     "Atlantic Ocean",
+     39
+    ],
+    [
+     "Mediterranean Sea",
+     38
+    ],
+    [
+     "Red Sea",
+     8
+    ],
+    [
+     "Persian Gulf",
+     8
+    ],
+    [
+     "Ionian Sea",
+     8
+    ],
+    [
+     "Lake",
+     2
+    ],
+    [
+     "Black Sea",
+     1
+    ]
+   ],
+   "rows": [
+    {
+     "label": "Mediterranean",
+     "colour": "red",
+     "count": 112
+    },
+    {
+     "label": "Indo-Pacific",
+     "count": 183,
+     "colour": "teal"
+    }
+   ]
+  },
+  {
+   "about": "without groups: the values that have a colour, in the order counted",
+   "classes": 0,
+   "counted": [
+    [
+     "Black Sea",
+     1
+    ],
+    [
+     "Aegean Sea",
+     65
+    ],
+    [
+     "Indian Ocean",
+     94
+    ]
+   ],
+   "rows": [
+    {
+     "label": "Aegean Sea",
+     "colour": "red",
+     "count": 65
+    },
+    {
+     "label": "Indian Ocean",
+     "colour": "teal",
+     "count": 94
+    }
+   ]
+  }
+ ],
+ "match": [
+  {
+   "about": "text: the value as text; a group of one value is a single label",
+   "classes": 1,
+   "expression": [
+    "match",
+    [
+     "to-string",
+     [
+      "get",
+      "ocean_sea"
+     ]
+    ],
+    [
+     "Mediterranean Sea",
+     "Aegean Sea",
+     "Ionian Sea",
+     "Black Sea"
+    ],
+    "red",
+    [
+     "Indian Ocean",
+     "Red Sea",
+     "Persian Gulf",
+     "Pacific Ocean"
+    ],
+    "teal",
+    "OTHER"
+   ]
+  },
+  {
+   "about": "numbers: the canonical text of each value, so that 1.0 in a group meets 1 in a record",
+   "classes": 2,
+   "expression": [
+    "match",
+    [
+     "to-string",
+     [
+      "get",
+      "depth"
+     ]
+    ],
+    "1",
+    "blue",
+    "OTHER"
+   ]
+  },
+  {
+   "about": "no field: the plain colour",
+   "classes": 3,
+   "expression": "PLAIN"
+  }
+ ]
+}

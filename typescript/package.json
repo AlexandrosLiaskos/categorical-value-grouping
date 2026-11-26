@@ -1,0 +1,51 @@
+{
+  "name": "categorical-value-grouping",
+  "version": "0.1.0",
+  "description": "Categorical value grouping for thematic symbology: named groups of the values of a field, checked, carried over to new data, coloured, counted in a legend and written as a MapLibre style expression, with the same rules as the Python package of the same name.",
+  "keywords": [
+    "cartography",
+    "thematic-mapping",
+    "symbology",
+    "unique-values",
+    "legend",
+    "maplibre",
+    "mapbox"
+  ],
+  "license": "AGPL-3.0-only",
+  "author": "Alexandros Liaskos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandrosLiaskos/categorical-value-grouping.git",
+    "directory": "typescript"
+  },
+  "homepage": "https://github.com/AlexandrosLiaskos/categorical-value-grouping#readme",
+  "bugs": "https://github.com/AlexandrosLiaskos/categorical-value-grouping/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "types": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run types && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0"
+  }
+}
