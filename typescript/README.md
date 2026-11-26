@@ -103,8 +103,9 @@ browser. One set of tests for both packages ends that difference.
 Liaskos, A. (2026). _Categorical Value Grouping for Thematic Symbology_ (Version 0.1.0) [Computer software]. Zenodo.
 https://doi.org/10.5281/zenodo.24554514
 
-The citation is also given in [CITATION.cff](CITATION.cff), which GitHub offers under "Cite this repository". Each
-release is archived on Zenodo with its own DOI.
+To cite every version at once, use the concept DOI [10.5281/zenodo.24554513](https://doi.org/10.5281/zenodo.24554513),
+which always resolves to the latest release. The citation is also given in [CITATION.cff](CITATION.cff), which GitHub
+offers under "Cite this repository". Each release is archived on Zenodo with its own DOI.
 
 ## Licence
 
